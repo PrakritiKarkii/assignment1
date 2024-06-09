@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* Project 1 | COMP1073 Client-Side JavaScript */
+/* This defines the character encoding for the CSS file */
+
+/* Basic page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Applies a modern, easy-to-read font */
+    background-color: #D1AE3C; /* Sets a light yellow background color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Uses flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Makes the body height full viewport height */
+    flex-direction: column; /* Arranges children in a column */
+    gap: 10px; /* Adds space between flex items */
+}
+
+.pic {
+    width: 200px; /* Sets width for the picture container */
+    height: 200px; /* Sets height for the picture container */
+}
+
+.pic .frg {
+    height: 100%; /* Ensures image height covers the container */
+    width: 100%; /* Ensures image width covers the container */
+    border-radius: 50%; /* Rounds the image to a circle */
+    box-shadow: 
+    1px 1px 20px #000, /* Adds a dark shadow */
+    -1px -1px 20px #fff; /* Adds a light shadow for contrast */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+/* Container styles */
+.container {
+    background-color: #ffffff; /* White background for container */
+    padding: 30px; /* Internal padding for container */
+    border-radius: 10px; /* Rounded corners for container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    text-align: center; /* Centered text */
+    width: 80%; /* Container width is 80% of the parent */
+    max-width: 600px; /* Maximum width of the container */
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 24px; /* Heading font size */
+    color: #fff; /* White text color */
+}
+
+/* Button group styles */
+.buttons, .story-controls {
+    margin-bottom: 20px; /* Space below the button groups */
+    display: flex; /* Flexbox layout for button groups */
+    justify-content: center; /* Centers buttons horizontally */
+    flex-wrap: wrap; /* Allows wrapping of buttons to the next line */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button styles */
+button {
+    color: #ffffff; /* White text color for buttons */
+    border: none; /* Removes default border */
+    height: 120px; /* Sets button height */
+    width: 120px; /* Sets button width */
+    margin: 10px; /* Space around buttons */
+    border-radius: 50%; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover and active states */
+}
+
+button:hover {
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+button:active {
+    transform: scale(1); /* Resets button size on click */
+}
+
+/* Individual button styles */
+#getNoun {
+    background-color: #8B0A76; /* Darker magenta background for noun button */
+    box-shadow: 0 5px #6D085A; /* Darker shadow for depth */
+}
+
+#getNoun:hover {
+    background-color: #A10E95; /* Lighter magenta on hover */
+}
+
+#getVerb {
+    background-color: #1F8BA7; /* Darker blue background for verb button */
+    box-shadow: 0 5px #176C85; /* Darker shadow for depth */
+}
+
+#getVerb:hover {
+    background-color: #27A4CB; /* Lighter blue on hover */
+}
+
+#getAdjective {
+    background-color: #467511; /* Darker green background for adjective button */
+    box-shadow: 0 5px #355B0E; /* Darker shadow for depth */
+}
+
+#getAdjective:hover {
+    background-color: #529C13; /* Lighter green on hover */
+}
+
+#getObject {
+    background-color: #A65616; /* Darker orange background for object button */
+    box-shadow: 0 5px #834311; /* Darker shadow for depth */
+}
+
+#getObject:hover {
+    background-color: #D3741C; /* Lighter orange on hover */
+}
+
+#getLocation {
+    background-color: #A02D8A; /* Darker pink background for place button */
+    box-shadow: 0 5px #7C236E; /* Darker shadow for depth */
+}
+
+#getLocation:hover {
+    background-color: #D345B2; /* Lighter pink on hover */
+}
+
+#generateStory {
+    background-color: #B3B3B3; /* Darker grey background for generate story button */
+    color: #000; /* Black text color */
+    box-shadow: 0 5px #8C8C8C; /* Darker shadow for depth */
+}
+
+#generateStory:hover {
+    background-color: #D9D9D9; /* Lighter grey on hover */
+}
+
+#clearStory {
+    background-color: #9A0E08; /* Darker red background for reset button */
+    box-shadow: 0 5px #780A06; /* Darker shadow for depth */
+}
+
+#clearStory:hover {
+    background-color: #C11109; /* Lighter red on hover */
+}
+
+#readStory {
+    background-color: #19725E; /* Darker turquoise background for speak button */
+    box-shadow: 0 5px #145947; /* Darker shadow for depth */
+}
+
+#readStory:hover {
+    background-color: #208E7C; /* Lighter turquoise on hover */
+}
+
+/* Story display area styles */
+.story-output {
+    margin-top: 20px; /* Space above story display area */
+    font-size: 18px; /* Story text font size */
+    min-height: 50px; /* Minimum height for story display */
+    padding: 15px; /* Padding inside story display */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for story display */
+    background-color: #fafafa; /* Light grey background */
+    color: #00796b; /* Dark teal text color */
+    white-space: pre-line; /* Preserves spaces and line breaks */
+    text-align: left; /* Left-aligned text */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .pic {
+        display: none; /* Hides picture on small screens */
+        opacity: 0; /* Ensures picture is fully hidden */
+    }
+    
+    .container {
+        padding: 20px; /* Reduces padding on small screens */
+        width: 100%; /* Container width 100% on small screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons on small screens */
+        padding: 10px; /* Smaller padding for buttons on small screens */
+    }
+
+    .story-output {
+        font-size: 16px; /* Smaller font size for story output on small screens */
+        padding: 10px; /* Smaller padding for story output on small screens */
+    }
+}
